@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Checking for the PYFILE environment variable if it is set
 if [ -z "$PYFILE" ]; then
