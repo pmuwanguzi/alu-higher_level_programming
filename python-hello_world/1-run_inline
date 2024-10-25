@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -z "$PYCODE" ] && { echo "Error: PYFILE variable is not set." && exit 1; } || python3 "$PYCODE"
+[ -z "$PYCODE" ] && { echo "Error: $PYCODE variable is not set." && exit 1; } || python3 -c "$PYCODE"
