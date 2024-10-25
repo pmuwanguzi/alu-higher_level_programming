@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Checking for the PYFILE environment variable if it is set
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE variable is not set."
+    exit 1
+fi
+
+# Cammand to finally run the python script
+python "$PYFILE"
