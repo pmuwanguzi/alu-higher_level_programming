@@ -4,7 +4,7 @@
 
 
 class Square:
-"""This class is a class with a private instance size."""
+    """This class is a class with a private instance size."""
 
     def __init__(self, size:int):
         """Square with given size initialised."""
