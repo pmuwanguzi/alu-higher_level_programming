@@ -2,5 +2,6 @@
 
 
 class Square:
+"""This class is defining a square."""
 
     pass
