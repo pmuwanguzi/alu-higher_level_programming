@@ -3,7 +3,8 @@
 
 
 def append_write(filename="", text=""):
-    """Appends a string to the end of a text file (UTF8) and returns the number of characters added."""
+    """Appends a string to the end of a text file (UTF8)
+    and returns the number of characters added."""
     if not filename:
         print("Filename is required.")
         return 0
