@@ -13,7 +13,6 @@ def main():
     response headers.
     """
     url = sys.argv[1]
-    
     # Send a GET request to the URL and retrieve the response headers
     with urllib.request.urlopen(url) as response:
         # Retrieve the value of the X-Request-Id header
