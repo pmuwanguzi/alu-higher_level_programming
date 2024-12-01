@@ -16,7 +16,7 @@ if __name__ == "__main__":
     """
 
     # Send a GET request to the URL
-    response = requests.get(url = sys.argv[1])
+    response = requests.get(sys.argv[1])
 
     # Check if status code is 400 or > and print the error message
     if response.status_code >= 400:
