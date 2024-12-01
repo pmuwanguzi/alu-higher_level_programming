@@ -1,0 +1,34 @@
+>>> from 4_print_square import print_square
+
+# Test with size 4
+>>> print_square(4)
+####
+####
+####
+####
+
+# Test with size 1
+>>> print_square(1)
+#
+
+# Test with size 0 (prints nothing)
+>>> print_square(0)
+
+# Test with invalid type for size (string)
+>>> print_square("4")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Test with invalid type for size (float)
+>>> print_square(4.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Test with negative size
+>>> print_square(-4)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+

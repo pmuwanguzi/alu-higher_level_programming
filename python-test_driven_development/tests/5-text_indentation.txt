@@ -1,0 +1,37 @@
+>>> from text_indentation import text_indentation
+
+# Test with a simple string
+>>> text = "Hello. How are you? This is a test: to check the function."
+>>> text_indentation(text)
+Hello.
+
+How are you?
+
+This is a test:
+
+to check the function.
+
+# Test with text containing multiple spaces
+>>> text = "Hello   .  How are you ?    Testing:  "
+>>> text_indentation(text)
+Hello.
+
+How are you?
+
+Testing.
+
+# Test with empty string
+>>> text = ""
+>>> text_indentation(text)
+
+# Test with invalid type (integer)
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Test with invalid type (list)
+>>> text_indentation(["Hello."])
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string

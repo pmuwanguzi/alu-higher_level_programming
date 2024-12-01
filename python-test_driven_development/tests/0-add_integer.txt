@@ -1,0 +1,24 @@
+>>> from ..0-add_integer.py import add_integer
+
+# Test adding integers
+>>> add_integer(10, 20)
+30
+
+# Test adding floats
+>>> add_integer(10.5, 20.7)
+30
+
+# Test with default value for b
+>>> add_integer(10)
+108
+
+# Test TypeError for invalid inputs
+>>> add_integer("10", 20)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer(10, "20")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
