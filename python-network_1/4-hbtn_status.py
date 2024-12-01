@@ -9,8 +9,9 @@ import requests
 
 if __name__ == "__main__":
     """
-    Sends a GET request to 'https://alu-intranet.hbtn.io/status', get's back the
-    response then displays the type, content, and decoded content of the body
+    Sends a GET request to 'https://alu-intranet.hbtn.io/status',
+    get's back the response then displays
+    the type, content, and decoded content of the body
     of the response.
     """
     url = 'https://alu-intranet.hbtn.io/status'
@@ -22,4 +23,5 @@ if __name__ == "__main__":
     print("Body response:")
     print("    - type: {}".format(type(response.text)))
     print("    - content: {}".format(response.text))
-    print("    - utf8 content: {}".format(response.text.encode('utf-8').decode('utf-8')))
+    print("    - utf8 content: {}".
+            format(response.text.encode('utf-8').decode('utf-8')))
