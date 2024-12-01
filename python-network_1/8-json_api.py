@@ -15,8 +15,10 @@ import sys
 
 def main():
     """
-    Sends a POST request to the specified URL with a letter as the `q` parameter.
-    Handles the response, displaying either the user id and name, or error messages
+    Sends a POST request to the specified URL with
+    a letter as the `q` parameter.
+    Handles the response, displaying either the user id and name,
+    or error messages
     for invalid JSON, or empty JSON results.
     """
     letter = "" if len(sys.argv) < 2 else sys.argv[1]
