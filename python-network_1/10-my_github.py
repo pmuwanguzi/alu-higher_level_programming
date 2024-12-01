@@ -31,5 +31,4 @@ if __name__ == "__main__":
         user_data = response.json()
         print(user_data.get("id"))
     else:
-        # If there's an error, print the error message
-        print("Error: Unable to fetch user data")
+        pass
