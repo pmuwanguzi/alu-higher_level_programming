@@ -17,11 +17,6 @@ if __name__ == "__main__":
     then prints the value of the `X-Request-Id`
     header from the response.
     """
-    url = sys.argv[1]
-
-    # Send a GET request to the URL
-    response = requests.get(url)
-
-    # Fetch and print the X-Request-Id header value
-    print(response.headers.get('X-Request-Id'))
+    response = requests.get(sys.argv[1])
+    print(response.headers.get("X-Request-Id"))
 
