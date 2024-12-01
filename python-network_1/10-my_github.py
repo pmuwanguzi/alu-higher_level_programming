@@ -30,5 +30,3 @@ if __name__ == "__main__":
         # If the response is successful, print the user ID
         user_data = response.json()
         print(user_data.get("id"))
-    else:
-        pass
