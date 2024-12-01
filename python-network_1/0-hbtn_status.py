@@ -4,6 +4,7 @@ using the urllib package."""
 from urllib import request
 
 if __name__ == "__main__":
+    """This is the main entry point to run the code."""
     with request.urlopen('https://alu-intranet.hbtn.io/status') as response:
     body = response.read()
         body = response.read()
