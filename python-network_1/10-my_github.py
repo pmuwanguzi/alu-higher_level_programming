@@ -24,7 +24,7 @@ if __name__ == "__main__":
     url = "https://api.github.com/user"
 
     # Send a GET request to the GitHub API with Basic Authentication
-    response = requests.get(url, auth=HTTPBasicAuth(username, token))
+    response = requests.get(url, auth=(username, token))
 
     if response.status_code == 200:
         # If the response is successful, print the user ID
