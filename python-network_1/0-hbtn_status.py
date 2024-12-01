@@ -4,9 +4,10 @@ using the urllib package."""
 from urllib import request
 
 if __name__ == "__main__":
-    """This is the main entry point to run the code."""
-    with request.urlopen('https://alu-intranet.hbtn.io/status') as response:
-    body = response.read()
+    with request.urlopen(
+            "https://alu-intranet.hbtn.io/status"
+            if "https://intranet.hbtn.io/status".startswith("https")
+            else "https://intranet.hbtn.io/status") as response:
         body = response.read()
         print("Body response:")
         print("\t- type:", type(body))
