@@ -7,9 +7,8 @@ personal access token to access
 the GitHub user information.
 """
 
-import requests
+from requests import get
 import sys
-from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
@@ -18,5 +17,5 @@ if __name__ == "__main__":
     and displays the user ID.
     """
     url = "https://api.github.com/user"
-    response = get(url, auth=(argv[1], argv[2]))
+    response = get(url, auth=(sys.argv[1], sys.argv[2]))
     print(response.json().get("id"))
