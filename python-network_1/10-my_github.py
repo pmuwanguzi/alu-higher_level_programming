@@ -2,7 +2,8 @@
 """
 This script takes in a GitHub username and personal access token (as password),
 and uses the GitHub API to display the user ID.
-It uses Basic Authentication with the username and personal access token to access
+It uses Basic Authentication with the username and
+personal access token to access
 the GitHub user information.
 """
 
