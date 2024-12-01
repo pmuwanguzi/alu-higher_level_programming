@@ -6,6 +6,7 @@ the header of the response using only packages urllib and sys"""
 import urllib.request
 import sys
 
+
 def main():
     """
     Here the script takes the URL from the command-line
@@ -17,10 +18,9 @@ def main():
     with urllib.request.urlopen(url) as response:
         # Retrieve the value of the X-Request-Id header
         request_id = response.getheader('X-Request-Id')
-    
+
     # Print the value of the X-Request-Id header
     print(request_id)
 
 if __name__ == "__main__":
     main()
-
