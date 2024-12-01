@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-This script takes a URL and an email address as arguments, sends a POST request
-to the URL with the email as a parameter, and displays the body of the response.
-
+Takes a URL and an email address as arguments, sends a POST request
+to the URL with the email as a parameter,
+and displays the body of the response
 The script uses the `requests` and `sys` packages.
 """
 
