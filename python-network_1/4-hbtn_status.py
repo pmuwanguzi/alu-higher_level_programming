@@ -8,7 +8,6 @@ import requests
 
 
 if __name__ == "__main__":
-    main()
     """
     Sends a GET request to 'https://alu-intranet.hbtn.io/status', get's back the
     response then displays the type, content, and decoded content of the body
