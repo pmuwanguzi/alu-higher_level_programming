@@ -13,7 +13,7 @@ import requests
 import sys
 
 
-def main():
+if __name__== "__main__":
     """
     Sends a POST request to the specified URL with
     a letter as the `q` parameter.
