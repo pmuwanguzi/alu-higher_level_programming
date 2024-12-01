@@ -13,7 +13,7 @@ import requests
 import sys
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     """
     Sends a POST request to the specified URL with
     a letter as the `q` parameter.
@@ -36,7 +36,8 @@ if __name__== "__main__":
 
         if json_response:
             # If the JSON is not empty, display the id and name
-            print("[{}] {}".format(json_response.get('id'), json_response.get('name')))
+            print("[{}] {}".format(json_response.get('id'),
+                json_response.get('name')))
         else:
             # If the JSON is empty, display No result
             print("No result")
