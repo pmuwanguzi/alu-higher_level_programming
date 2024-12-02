@@ -1,47 +1,61 @@
 #!/usr/bin/python3
-"""
-Unitests for the add_integer function
-"""
+"""Unittests for max_integer([..])."""
+
 import unittest
-from python-test_driven_development._0-add_integer import add_integer
+max_integer = __import__('6-max_integer').max_integer
 
-class TestAddInteger(unittest.TestCase):
-    """Test cases for the add_integer function"""
 
-    def test_add_integers(self):
-        # Test with two integers
-        self.assertEqual(add_integer(5, 3), 8)
-        
-    def test_add_float_and_integer(self):
-        # Test with a float and an integer
-        self.assertEqual(add_integer(5.5, 3), 8)
-        
-    def test_add_integer_and_float(self):
-        # Test with an integer and a float
-        self.assertEqual(add_integer(5, 3.5), 8)
-        
-    def test_add_two_floats(self):
-        # Test with two floats
-        self.assertEqual(add_integer(5.5, 3.7), 9)
-        
-    def test_add_default_b(self):
-        # Test with only the first argument (b defaults to 98)
-        self.assertEqual(add_integer(5), 103)
+class TestMaxInteger(unittest.TestCase):
+    """Define unittests for max_integer([..])."""
 
-    def test_invalid_a_type(self):
-        # Test invalid type for `a` (string)
-        with self.assertRaises(TypeError):
-            add_integer("string", 3)
+    def test_ordered_list(self):
+        """Test an ordered list of integers."""
+        ordered = [1, 2, 3, 4]
+        self.assertEqual(max_integer(ordered), 4)
 
-    def test_invalid_b_type(self):
-        # Test invalid type for `b` (string)
-        with self.assertRaises(TypeError):
-            add_integer(5, "string")
-            
-    def test_both_invalid(self):
-        # Test invalid types for both `a` and `b`
-        with self.assertRaises(TypeError):
-            add_integer("string", "string")
+    def test_unordered_list(self):
+        """Test an unordered list of integers."""
+        unordered = [1, 2, 4, 3]
+        self.assertEqual(max_integer(unordered), 4)
 
-if __name__ == "__main__":
+    def test_max_at_begginning(self):
+        """Test a list with a beginning max value."""
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
+
+    def test_empty_list(self):
+        """Test an empty list."""
+        empty = []
+        self.assertEqual(max_integer(empty), None)
+
+    def test_one_element_list(self):
+        """Test a list with a single element."""
+        one_element = [7]
+        self.assertEqual(max_integer(one_element), 7)
+
+    def test_floats(self):
+        """Test a list of floats."""
+        floats = [1.53, 6.33, -9.123, 15.2, 6.0]
+        self.assertEqual(max_integer(floats), 15.2)
+
+    def test_ints_and_floats(self):
+        """Test a list of ints and floats."""
+        ints_and_floats = [1.53, 15.5, -9, 15, 6]
+        self.assertEqual(max_integer(ints_and_floats), 15.5)
+
+    def test_string(self):
+        """Test a string."""
+        string = "Brennan"
+        self.assertEqual(max_integer(string), 'r')
+
+    def test_list_of_strings(self):
+        """Test a list of strings."""
+        strings = ["Brennan", "is", "my", "name"]
+        self.assertEqual(max_integer(strings), "name")
+
+    def test_empty_string(self):
+        """Test an empty string."""
+        self.assertEqual(max_integer(""), None)
+
+if __name__ == '__main__':
     unittest.main()
