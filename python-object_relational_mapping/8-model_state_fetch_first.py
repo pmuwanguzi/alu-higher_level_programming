@@ -15,8 +15,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Use an iterator to avoid fetching all results at once
-    for state in session.query(State).order_by(State.id):
+    # Iterate over the query results directly without fetching all at once
+    query = session.query(State).order_by(State.id)
+    for state in query:  # Fetch results lazily
         print("{}: {}".format(state.id, state.name))
 
     session.close()
